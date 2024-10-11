@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <style>
+            .menu-icon {
+                color:#0a0a0a;
+            }
+    a {
+        text-decoration: none;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Times, serif;
+    }
+    
+    body {
+        background: #f5f5f5f5;
+       
+    }
+    
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 7%;
+        background-color: #0a0a0a;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: 450;
+    }
+    .logo img {
+        margin-right: 10px;}
+    
+    .navbar a {
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 500;
+        margin-left: 35px;
+        transition: .3s;
+    }
+    
+    .navbar a:hover {
+        color: #e3d6d6d6;
+    }
+    .logo :hover{
+    color: #e3d6d6d6;
+}
+.navbar a:hover{
+    color: #e3d6d6d6;
+}
+.navbar li{
+    list-style: none;;
+}
+
+.sidebar{
+    top:0;
+    right:0;
+    position:fixed;
+    height: 100vh;
+    width:250px;
+    z-index: index 999;
+    background-color: #ffffff;
+    box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1);
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-start;
+    
+}
+.sidebar li{
+    
+    font-size: 30px;
+    
+    font-weight: 600;
+    margin-left: 35px;
+    transition: .3s;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+.sidebar a{
+    color: #000000;
+    font-size: 16px;
+    
+    font-weight: 600;
+    margin-left: 35px;
+    transition: .3s;
+    margin-top: 30px;
+
+}
+
+
+
+footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+
+
+    
+    .Title {
+        font-size: 40px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 130px;
+        padding-left: 90px;
+        align-items: center;
+        display: flex;
+        color: #000000be;
+        font-weight: 400;
+        padding-right: 300px;
+    }
+    .h1 {
+        font-size: 14px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 2px;
+        padding-left: 110px;
+        align-items: center;
+        display: flex;
+        color: #00000048;
+        font-weight: 600;
+        padding-right: 300px;
+    }
+    .h3{
+        font-size: 18px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 40px;
+        padding-left: 90px;
+        align-items: center;
+        display: flex;
+        color: #00000071;
+        font-weight: 547;
+        padding-right: 300px;
+        font-style: italic;
+        line-height: 10px;
+
+    }
+    
+    .starting {
+        font-size: 20px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding-left: 90px;
+        align-items: center;
+        display: flex;
+        color: #0000009a;
+        font-weight: 400;
+        padding-right: 300px;
+    }
+    
+    .starting p {
+        margin-top: 12px;
+        margin-bottom: 25px;
+    }
+    .conclusion {
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-left: 90px;
+    align-items: center;
+    display: flex;
+    text-decoration: italic;
+    color: #000000;
+    font-weight: 400;
+    padding-right: 300px;
+    margin-bottom: 50px;
+}
+    
+    
+    
+    .menu-button{
+    display: none;
+}
+
+@media (max-width: 800px) {
+    
+    .hideOnMobile{
+        display:none;
+
+    }
+    .menu-button{
+        display: block;
+    }
+
+}
+@media(max-width: 800px){
+    .Title {
+        font-size: 30px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 50px;
+        padding-left: 60px;
+        
+        display: flex;
+        color: #000000be;
+        font-weight: 400;
+        padding-right: 20px;
+    }
+    .h1 {
+        font-size: 14px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-left: 60px;
+        
+        display: flex;
+        color: #00000048;
+        font-weight: 600;
+        padding-right: 20px;
+    }
+    .h3{
+        font-size: 18px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 100px;
+        padding-left: 60px;
+        align-items: center;
+        display: flex;
+        color: #00000071;
+        font-weight: 547;
+        padding-right: 20px;
+        font-style: italic;
+        line-height: 10px;
+
+    }
+    
+    .starting {
+        font-size: 20px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding-left: 60px;
+        align-items: center;
+        display: flex;
+        color: #0000009a;
+        font-weight: 400;
+        padding-right: 20px;
+    }
+    
+    .starting p {
+        margin-top: 12px;
+        margin-bottom: 25px;
+    }
+    .conclusion {
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-left: 60px;
+    align-items: center;
+    display: flex;
+    text-decoration: italic;
+    color: #000000;
+    font-weight: 400;
+    padding-right: 20px;
+    margin-bottom: 50px;
+}
+.img{
+    width:350px;
+}
+    
+}
+
+    
+    </style>
+        <title>Impact of community service on personal growth </title>
+        <link href="logo.png" rel="icon">
+    </head>
+    <body>
+
+        <header class = "header">
+            <a href="Index.html" class="logo">
+                <img src="logo.png"  width="40px" style="margin-left:10px;">The SecluSive Chronicles
+            </a>
+            
+
+            <nav class="navbar">
+               <li class="hideOnMobile"> <a href="index.html">Home</a></li>
+               <li class="hideOnMobile"> <a href="about.html">About</a></li>
+               <li class="hideOnMobile"> <a href="blog.html" style="color: #7e98d1;">Blogs</a></li>
+                
+                <li class="hideOnMobile"> <a href="Contact.html">Contact</a></li>
+                <li class="hideOnMobile"> <a href="gallery.html">Gallery</a></li>
+
+                <li class="menu-button" onclick=showSidebar() ><a href="#" ><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" style="color: rgb(0, 0, 0);"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                
+            </nav>
+            <nav class="sidebar" >
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <a href="homepage.html">Home</a>
+                 <a href="about.html">About</a>
+                <a href="blog.html">Blogs</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact">Gallery</a>
+                
+            </nav>
+
+        </header>
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+        </script>
+        <section>
+           
+
+            <div class="Title">
+                Impact of community service on personal growth                </div>
+                <h3 class="h3"><img  class="img" src="volunteering.jpeg" width="630px"></h3>
+                <h1 class="h1">Posted on August 30, 2024</h1>
+                
+
+              <div class="starting">
+                Humans are born to live and work together; they thrive most successfully when inundating themselves with others. Segregation and ostracism from society can lead to detrimental effects on both mental and physical health, such as depression, anxiety, loneliness, and more. It’s imperative to involve oneself in community service work, such as volunteering, as positive interactions can stimulate dopamine release, which causes pleasure and builds a strong cognitive mind. Regardless, in our society, we often prioritize those who are exuberant, zestful, and extroverted because they can form genial and abiding relationships. However, all human beings are not the same in psychology and behaviour. Some love spending time in isolation, while others prefer the public sphere. I simply disapprove of the stereotype that introverts cannot work in public places. It’s not introversion that holds them back; rather, it is society that perpetuates this prevalent notion.
+
+
+                </div>
+                <div class="starting">
+                    I was born an introvert, initially staying away from friends and disliking community chores. Even when I attempted them, no one ever emboldened me. It was literally a challenge to get out of my comfort zone, especially amid the constant nagging from society. We need to acknowledge that every person has their own attributes and abilities; being an introvert doesn’t necessarily make someone inept at communication. 
+                    </div>
+            <div class="starting">
+                Deciding to engage in community service was, at first, an arduous pursuit. It was one of my best friends who urged me to join the Red Crescent Society as a volunteer, and though I was reluctant, I eventually consented. When I started working on packaging relief items and distributing them to those affected by disasters, I noticed a healthy boost to my self-confidence, self-esteem, and life satisfaction. I felt a sense of fruition and purpose. Most importantly, I was successful in forming abiding friendships that made my life meaningful. I remember the time I helped distribute food to impoverished people affected by a cyclone. Their joy made my blood rich in dopamine, the pleasure hormone, which piqued my enthusiasm for working with people.
+                </div>
+                <div class="starting">
+                    Apart from mental and physical development, I learned a myriad of skills, from communication to problem-solving. I had to make headcounts of the houses we delivered items to, and our team had the incumbent task of fundraising from the public, especially during floods. Additionally, I was an English teacher at an underprivileged school where I tutored and supervised children, made lesson plans, took exams, and checked their progress—all without remuneration.
+                </div>
+                    <div class="starting">
+                        Volunteering and community work can significantly boost one’s mind, improving critical thinking abilities. It helps mitigate negative thoughts, predominantly depression. I feel doleful that society makes judgments based on personality traits; therefore, I aim to debunk the idea that introversion is a weakness. Every human being is unique, and that uniqueness should be celebrated.
+
+                    </div>
+                    
+            </section>
+
+                
+            
+            
+            <section>
+                <div class="conclusion">
+
+                    Written by Md Rafsun Bin Hossain,<br> Oct/Nov 2023 A Level candidate & alumnus of Sunshine Grammar School, Chittagong, Bangladesh. 
+                </div>
+               </section>
+               <footer>
+                <p>&copy; 2024 The SecluSive Chronicles. All Rights Reserved.</p>
+            </footer>
+    </body>
+</html>

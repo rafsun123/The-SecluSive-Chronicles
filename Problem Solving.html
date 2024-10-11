@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <style>
+            .menu-icon {
+                color:#0a0a0a;
+            }
+    a {
+        text-decoration: none;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Times, serif;
+    }
+    
+    body {
+        background: #f5f5f5f5;
+       
+    }
+    
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 7%;
+        background-color: #0a0a0a;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: 450;
+    }
+    .logo img {
+        margin-right: 10px;}
+    
+    .navbar a {
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 500;
+        margin-left: 35px;
+        transition: .3s;
+    }
+    
+    .navbar a:hover {
+        color: #e3d6d6d6;
+    }
+    .logo :hover{
+    color: #e3d6d6d6;
+}
+.navbar a:hover{
+    color: #e3d6d6d6;
+}
+.navbar li{
+    list-style: none;;
+}
+
+.sidebar{
+    top:0;
+    right:0;
+    position:fixed;
+    height: 100vh;
+    width:250px;
+    z-index: index 999;
+    background-color: #ffffff;
+    box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1);
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-start;
+    
+}
+.sidebar li{
+    
+    font-size: 30px;
+    
+    font-weight: 600;
+    margin-left: 35px;
+    transition: .3s;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+.sidebar a{
+    color: #000000;
+    font-size: 16px;
+    
+    font-weight: 600;
+    margin-left: 35px;
+    transition: .3s;
+    margin-top: 30px;
+
+}
+
+
+
+footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+
+
+    
+    .Title {
+        font-size: 40px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 50px;
+        padding-left: 90px;
+        align-items: center;
+        display: flex;
+        color: #000000be;
+        font-weight: 400;
+        padding-right: 300px;
+    }
+    .h1 {
+        font-size: 14px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-left: 110px;
+        align-items: center;
+        display: flex;
+        color: #00000048;
+        font-weight: 600;
+        padding-right: 300px;
+    }
+    .h3{
+        font-size: 18px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 100px;
+        padding-left: 90px;
+        align-items: center;
+        display: flex;
+        color: #00000071;
+        font-weight: 547;
+        padding-right: 300px;
+        font-style: italic;
+        line-height: 10px;
+
+    }
+    
+    .starting {
+        font-size: 20px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding-left: 90px;
+        align-items: center;
+        display: flex;
+        color: #0000009a;
+        font-weight: 400;
+        padding-right: 300px;
+    }
+    
+    .starting p {
+        margin-top: 12px;
+        margin-bottom: 25px;
+    }
+    .conclusion {
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-left: 90px;
+    align-items: center;
+    display: flex;
+    text-decoration: italic;
+    color: #000000;
+    font-weight: 400;
+    padding-right: 300px;
+    margin-bottom: 50px;
+}
+    
+    
+    
+    .menu-button{
+    display: none;
+}
+
+@media (max-width: 800px) {
+    
+    .hideOnMobile{
+        display:none;
+
+    }
+    .menu-button{
+        display: block;
+    }
+
+}
+@media(max-width: 800px){
+    .Title {
+        font-size: 30px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 50px;
+        padding-left: 60px;
+        
+        display: flex;
+        color: #000000be;
+        font-weight: 400;
+        padding-right: 20px;
+    }
+    .h1 {
+        font-size: 14px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-left: 60px;
+        
+        display: flex;
+        color: #00000048;
+        font-weight: 600;
+        padding-right: 20px;
+    }
+    .h3{
+        font-size: 18px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 100px;
+        padding-left: 60px;
+        align-items: center;
+        display: flex;
+        color: #00000071;
+        font-weight: 547;
+        padding-right: 20px;
+        font-style: italic;
+        line-height: 10px;
+
+    }
+    
+    .starting {
+        font-size: 20px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding-left: 60px;
+        align-items: center;
+        display: flex;
+        color: #0000009a;
+        font-weight: 400;
+        padding-right: 20px;
+    }
+    
+    .starting p {
+        margin-top: 12px;
+        margin-bottom: 25px;
+    }
+    .conclusion {
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-left: 60px;
+    align-items: center;
+    display: flex;
+    text-decoration: italic;
+    color: #000000;
+    font-weight: 400;
+    padding-right: 20px;
+    margin-bottom: 50px;
+}
+.img{
+    width:350px;
+}
+    
+}
+
+    
+    </style>
+        <title>Elation: The Joy of Problem Solving. </title>
+        <link href="logo.png" rel="icon">
+    </head>
+    <body>
+
+        <header class = "header">
+            <a href="Index.html" class="logo">
+                <img src="logo.png"  width="40px" style="margin-left:10px;">The SecluSive Chronicles
+            </a>
+            
+
+            <nav class="navbar">
+               <li class="hideOnMobile"> <a href="index.html">Home</a></li>
+               <li class="hideOnMobile"> <a href="about.html">About</a></li>
+               <li class="hideOnMobile"> <a href="blog.html" style="color: #7e98d1;">Blogs</a></li>
+                
+                <li class="hideOnMobile"> <a href="Contact.html">Contact</a></li>
+                <li class="hideOnMobile"> <a href="gallery.html">Gallery</a></li>
+
+                <li class="menu-button" onclick=showSidebar() ><a href="#" ><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" style="color: rgb(0, 0, 0);"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                
+            </nav>
+            <nav class="sidebar" >
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <a href="homepage.html">Home</a>
+                 <a href="about.html">About</a>
+                <a href="blog.html">Blogs</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact">Gallery</a>
+                
+            </nav>
+
+        </header>
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+        </script>
+        <section>
+            <h3 class="h3"><img  class="img" src="Problem Solving Pic.jpg" width="630px"></h3>
+
+            <div class="Title">
+                Elation: The Joy of Problem Solving.
+                </div>
+                <h1 class="h1">Posted on August 23, 2024</h1>
+                
+
+              <div class="starting">
+                For most people, the art of problem solving seems redundant and tedious. However, I see it as a unique mixture of curiosity, challenge, and triumph that can transform even the most intimidating tasks into rewarding feats. I never view it as a chore; instead, it is a passion that ignites my intellectual curiosity and drives me to seek out novel challenges. Whether it's solving a complex math conundrum, debugging a piece of code, contemplating the laws of physics, or finding solutions to family issues, my perspective on problem solving is that it brings immense joy through overcoming obstacles and serves as a profound source of satisfaction and growth.
+
+
+
+                </div>
+                <div class="starting">
+                    One of my earliest encounters with problem solving came during high school when I participated in regional interschool Olympiads in physics and biology. The competitions were intense, with nuanced questions that demanded a deep understanding of concepts and critical thinking. I recall spending hours delving into books and online resources to grasp elusive concepts and deepen my knowledge. I remember solving complex integrations, pondering questions like, “Why does a photon have no mass but has momentum?” and visualizing the scenarios of the problems in my mind. Cracking these challenging problems and winning shiny medals were the real culmination of my efforts; I could feel the dopamine rush as my hard work paid off.
+                    </div>
+            <div class="starting">
+                Likewise, A Level mathematics, physics, biology, and chemistry significantly influenced my enthusiasm for problem solving. I often helped my peers with their questions about mechanics and chemistry, explaining concepts such as tangent graphs in trigonometry and reinforcing their understanding of math and equations. I recall the challenge of deciphering intricate problems that combined theoretical knowledge with practical application in math and physics. Hours spent studying, practicing, and discussing with peers—especially on topics like probability and normal distributions—culminated in achieving A* grades in every subject, including full marks in mechanics. These victories not only validated my efforts but also deepened my appreciation for the art of problem solving and piqued my curiosity to explore further.
+                </div>
+                <div class="starting">
+                    This drive led me to undertake the Harvard CS50 course, which introduced me to coding in C and Python. I encountered numerous coding challenges in the weekly assignments, where debugging code was initially filled with dismay and frustration. When I struggled to comprehend the situation and faced repeated failures, it fostered a temporary antipathy for programming. Nonetheless, my innate curiosity, the instant satisfaction of discovering a solution to a persistent bug, and the creation of exquisite code replaced my mundane amygdala with an intellectually adventurous one: hunting for buggy codes. As a result, each problem solved contributed to my growth as a thinker and problem solver.
+                </div>
+                    <div class="starting">
+                        Beyond academics, problem solving has been a crucial aspect of my personal life. After my father’s passing, I took on significant responsibilities, making decisions about every family matter. I had to manage a family business to provide income and handle family affairs to support my education. These challenges required me to apply problem-solving skills pragmatically in real-world scenarios, and I faced criticism from my mother if I made a flawed decision. Each obstacle I encountered—whether it was efficiently managing my time or navigating complex family issues—reinforced my belief in the power of problem solving to drive meaningful work and personal growth.
+
+
+                    </div>
+                    <div class="starting">
+                        Having multifaceted experiences, I have learned a myriad of skills related to problem solving—skills that I have applied in both academic and practical life. These experiences have piqued my interest in pursuing engineering as a career. Engineering is inherently about finding solutions to complex problems and creating innovations that positively impact society. I am eager to apply my skills in the engineering field, with a mindset focused on creativity, perseverance, and analytical thinking. I believe in challenging myself to thrive in the world by seeking solutions to the obstacles our world faces and finding deep satisfaction in the journey of discovery. For me, this joy is not just a fleeting moment but an abiding passion that continues to inspire and motivate me.
+                    </div>
+            </section>
+
+               <section>
+                <img src="BioOlympiadCertificate.jpg"  class="img" width="470px" style="margin-left: 100px; margin-top: 30px;">
+                
+               </section>
+            
+            
+            <section>
+                <div class="conclusion">
+
+                    Written by Md Rafsun Bin Hossain,<br> Oct/Nov 2023 A Level candidate & alumnus of Sunshine Grammar School, Chittagong, Bangladesh. 
+                </div>
+               </section>
+               <footer>
+                <p>&copy; 2024 The SecluSive Chronicles. All Rights Reserved.</p>
+            </footer>
+    </body>
+</html>
