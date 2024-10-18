@@ -916,6 +916,10 @@ body{
     .menu-button{
         display: block;
     }
+    .CS50{
+        display: none;
+    }
+
 
 }
 @media (max-width: 468px) {
@@ -927,4 +931,7 @@ body{
     .project {
         margin-top: 120px;
     }
+}
+.CS50{
+    width:800px
 }
