@@ -12,7 +12,7 @@ a {
 
 
 body {
-    background:#ca7403;
+    background:#000000;
     background-image:url(PP.jpg);
     background-size: 1400px;
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@ body {
 }
 
 
-.header.sticky{background-color: #271301;}
+.header.sticky{background-color: #313131;}
 .header.sticky .navbar a,
 .header.sticky .logo {
     
@@ -185,7 +185,7 @@ body {
     align-items: center;
     margin-top: 20px;
     margin-bottom: 150px;
-    background-color:#ee8803;
+    background-color:#d7d4cf;
     margin-right: 0px;
     
     
@@ -283,7 +283,7 @@ body {
 
 
     .activites{
-    background-color:#5a5a5a52;
+    background-color:#c6c6c6a8;
     margin-right: 0px ; 
     padding-bottom: 900px;
 
@@ -397,7 +397,7 @@ body {
         background-color: #555;}
 
     .Achievements{
-        background-color: #ca7403;
+        background-color:#d7d4cf;
         margin-right: 50px;
         padding-bottom: 900px;
         margin-top: 10px;
@@ -436,7 +436,7 @@ body {
 
 
 .contact{
-    background-color:#1a0500c7;
+    background-color:#c1c0c0c7;
     margin-right: 0px;
         padding-bottom: 700px;
         margin-top: 150px;
@@ -445,7 +445,7 @@ body {
     }
 
 .contact-text h2{
-    color: #ff9306;
+    color: #000000;
     margin-left: 130px;
     font-size: 50px;
     margin-top: 130px;
@@ -486,7 +486,7 @@ body {
     .contact-form h2 {
         text-align: center;
         margin-bottom: 20px;
-        color:rgb(255, 145, 0)
+        color:rgb(0, 0, 0)
     }
     
     .contact-form label {
@@ -508,7 +508,7 @@ body {
         display: block;
         width: 100%;
         padding: 10px;
-        background-color:#ff9900;
+        background-color:#000000;
         color: white;
         border: none;
         border-radius: 4px;
@@ -532,11 +532,11 @@ body {
     width:1100px; color: black; margin-left: 120px; border-top: 3px solid #000;
 }
 .Final{
-    margin-left: 130px;color: #ff9100; font-size: 30px;
+    margin-left: 130px;color: #000000; font-size: 30px;
 }
 @media (max-width: 800px){
 body{
-    background:#ca7403;
+    background:#000000;
     background-image:url(PP.jpg);
     background-size : 1400px;
     background-repeat: no-repeat;
@@ -574,7 +574,7 @@ body{
         align-items: center;
         margin-top: 20px;
         margin-bottom: 150px;
-        background-color:#ee8803;
+        background-color:#d7d4cf;
         margin-right: 0px;
         
         
@@ -658,7 +658,7 @@ body{
     
     
         .activites{
-        background-color:#5a5a5a52;
+        background-color:#adababbc;
         margin-right: 0px ; 
         padding-bottom: 900px;
     
@@ -705,7 +705,7 @@ body{
         
     
         .Achievements{
-            background-color: #ca7403;
+            background-color:#d7d4cf;
             margin-right: 50px;
             padding-bottom: 900px;
             margin-top: 10px;
@@ -744,7 +744,7 @@ body{
     
     
     .contact{
-        background-color:#1a0500c7;
+        background-color:#afadacc7;
         margin-right: 0px;
             padding-bottom: 700px;
             margin-top: 150px;
@@ -753,7 +753,7 @@ body{
         }
     
     .contact-text h2{
-        color: #ff9306;
+        color: #000000;
         margin-left: 30px;
         font-size: 50px;
         margin-top: 130px;
@@ -781,7 +781,7 @@ body{
             width:450px; color: black; margin-left: 20px; border-top: 3px solid #000;
         }
         .Final{
-            margin-left: 30px;color: #ff9100; font-size: 30px;
+            margin-left: 30px;color: #000000; font-size: 30px;
         }
     
     
@@ -799,7 +799,7 @@ body{
         .contact-form h2 {
             text-align: center;
             margin-bottom: 20px;
-            color:rgb(255, 145, 0)
+            color:rgb(0, 0, 0)
         }
         
         .contact-form label {
@@ -817,11 +817,12 @@ body{
             border-radius: 4px;
         }
         
+        
         .contact-form button {
             display: block;
             width: 100%;
             padding: 10px;
-            background-color:#ff9900;
+            background-color:#000000;
             color: white;
             border: none;
             border-radius: 4px;
@@ -904,6 +905,7 @@ body{
         
         .read-more:hover {
             background-color: #555;}
+            
     
 }
 
@@ -920,7 +922,7 @@ body{
         display: none;
     }
 
-
+    
 }
 @media (max-width: 468px) {
     .post {
@@ -931,6 +933,7 @@ body{
     .project {
         margin-top: 120px;
     }
+    
 }
 .CS50{
     width:800px
