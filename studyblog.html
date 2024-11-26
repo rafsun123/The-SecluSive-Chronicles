@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <style>
+            .menu-icon {
+                color:#0a0a0a;
+            }
+    a {
+        text-decoration: none;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Times, serif;
+    }
+    
+    body {
+        background: #f5f5f5f5;
+       
+    }
+    
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 7%;
+        background-color: #0a0a0a;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: 450;
+    }
+    .logo img {
+        margin-right: 10px;}
+    
+    .navbar a {
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 500;
+        margin-left: 35px;
+        transition: .3s;
+    }
+    
+    .navbar a:hover {
+        color: #e3d6d6d6;
+    }
+    .logo :hover{
+    color: #e3d6d6d6;
+}
+.navbar a:hover{
+    color: #e3d6d6d6;
+}
+.navbar li{
+    list-style: none;;
+}
+
+.sidebar{
+    top:0;
+    right:0;
+    position:fixed;
+    height: 100vh;
+    width:250px;
+    z-index: index 999;
+    background-color: #ffffff;
+    box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1);
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-start;
+    
+}
+.sidebar li{
+    
+    font-size: 30px;
+    
+    font-weight: 600;
+    margin-left: 35px;
+    transition: .3s;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+.sidebar a{
+    color: #000000;
+    font-size: 16px;
+    
+    font-weight: 600;
+    margin-left: 35px;
+    transition: .3s;
+    margin-top: 30px;
+
+}
+
+
+
+footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+
+
+    
+    .Title {
+        font-size: 40px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 130px;
+        padding-left: 90px;
+        align-items: center;
+        display: flex;
+        color: #000000be;
+        font-weight: 400;
+        padding-right: 300px;
+    }
+    .h1 {
+        font-size: 14px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 2px;
+        padding-left: 110px;
+        align-items: center;
+        display: flex;
+        color: #00000048;
+        font-weight: 600;
+        padding-right: 300px;
+    }
+    .h3{
+        font-size: 18px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 40px;
+        padding-left: 90px;
+        align-items: center;
+        display: flex;
+        color: #00000071;
+        font-weight: 547;
+        padding-right: 300px;
+        font-style: italic;
+        line-height: 10px;
+
+    }
+    
+.Bold {
+    font-size: 25px;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-left: 90px;
+    align-items: center;
+    display: flex;
+    color: #0d0742;
+    font-weight: 500;
+    padding-right: 10px;
+}
+    .starting {
+        font-size: 20px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding-left: 90px;
+        align-items: center;
+        display: flex;
+        color: #0000009a;
+        font-weight: 400;
+        padding-right: 300px;
+    }
+    
+    .starting p {
+        margin-top: 12px;
+        margin-bottom: 25px;
+    }
+    .conclusion {
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-left: 90px;
+    align-items: center;
+    display: flex;
+    text-decoration: italic;
+    color: #000000;
+    font-weight: 400;
+    padding-right: 300px;
+    margin-bottom: 50px;
+}
+    
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.blog-post{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.5rem;
+    flex: 0.5;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.blog-post img {
+    width: 100%;
+    border-radius: 8px;
+}
+.Blogpost {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    margin-left: 50px;
+
+}
+    
+    .menu-button{
+    display: none;
+}
+
+@media (max-width: 800px) {
+    
+    .hideOnMobile{
+        display:none;
+
+    }
+    .menu-button{
+        display: block;
+    }
+
+}
+@media(max-width: 800px){
+    .Title {
+        font-size: 30px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 160px;
+        padding-left: 60px;
+        
+        display: flex;
+        color: #000000be;
+        font-weight: 400;
+        padding-right: 20px;
+    }
+    .h1 {
+        font-size: 14px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-left: 60px;
+        
+        display: flex;
+        color: #00000048;
+        font-weight: 600;
+        padding-right: 20px;
+    }
+    .h3{
+        font-size: 18px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 100px;
+        padding-left: 60px;
+        align-items: center;
+        display: flex;
+        color: #00000071;
+        font-weight: 547;
+        padding-right: 20px;
+        font-style: italic;
+        line-height: 10px;
+
+    }
+    
+    .starting {
+        font-size: 20px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding-left: 60px;
+        align-items: center;
+        display: flex;
+        color: #0000009a;
+        font-weight: 400;
+        padding-right: 20px;
+    }
+    
+    .starting p {
+        margin-top: 12px;
+        margin-bottom: 25px;
+    }
+    .conclusion {
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-left: 60px;
+    align-items: center;
+    display: flex;
+    text-decoration: italic;
+    color: #000000;
+    font-weight: 400;
+    padding-right: 20px;
+    margin-bottom: 50px;
+}
+.img{
+    width:350px;
+}
+    
+}
+
+    
+    </style>
+        <title>Effective study techniques for STEM subjects in high school </title>
+        <link href="logo.png" rel="icon">
+    </head>
+    <body>
+
+        <header class = "header">
+            <a href="index.html" class="logo">
+                <img src="logo.png"  width="40px" style="margin-left:10px;">The SecluSive Chronicles
+            </a>
+            
+
+            <nav class="navbar">
+               <li class="hideOnMobile"> <a href="index.html">Home</a></li>
+               <li class="hideOnMobile"> <a href="about.html">About</a></li>
+               <li class="hideOnMobile"> <a href="blog.html" style="color: #7e98d1;">Blogs</a></li>
+                
+                <li class="hideOnMobile"> <a href="Contact.html">Contact</a></li>
+                <li class="hideOnMobile"> <a href="gallery.html">Gallery</a></li>
+
+                <li class="menu-button" onclick=showSidebar() ><a href="#" ><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" style="color: rgb(0, 0, 0);"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                
+            </nav>
+            <nav class="sidebar" >
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <a href="index.html">Home</a>
+                 <a href="about.html">About</a>
+                <a href="blog.html">Blogs</a>
+                <a href="Contact.html">Contact</a>
+                <a href="gallery.html">Gallery</a>
+                
+            </nav>
+
+        </header>
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+        </script>
+        <section>
+           
+
+            <div class="Title">
+                Effective study techniques for STEM subjects in high school              </div>
+                <h3 class="h3"><img  class="img" src="studyblog.jpg" width="950px"></h3>
+                <h1 class="h1">Posted on November 26, 2024</h1>
+                
+
+              <div class="starting">
+                High schoolers can feel overwhelmed and challenged to balance academics, extracurriculars, and other responsibilities. Some are unable to concentrate and invest meaningful time in their study due to intense pressure and myriads of responsibilities. Being a STEM student, it is important to develop a strong study habit, motivation, and intelligence to make an academic success. With proper study habits and time management, anyone can effectively leverage the time doing all pursuits their day.
+
+                </div>
+                <div class="Bold">
+                    Make a schedule 
+
+                </div>
+                <div class="starting">
+                    Tonight, before going to bed, take a page and a pen. Jot down all the tasks (study subjects, chapters, notes, homework, extracurricular activities, and other pursuits) and select the best time you prefer for each work. Make sure you can record the completion of each task. 
+                    </div>
+                    <div class="Bold">
+                        How will you make your study effective?
+
+                    </div>
+                    <div class="Bold">
+                        Start with a plan
+
+                    </div>
+            <div class="starting">
+                Before you begin studying, it's crucial that you figure out in advance what you’re going to do. Write down what you need to study and when you will study it. It is also important to create a realistic timeline for your studies and try to stick to it. Planning helps you stay organized and ensures that you cover all the topics you need to learn.
+
+                </div>
+
+                <div class=" Bold">
+                    Take regular breaks
+
+                </div>
+
+                <div class="starting">
+                    Regular breaks during study sessions are essential for maintaining focus and preventing burnout. Instead of trying to study for long hours without taking breaks, take a 5-10 minute break every hour. This allows your mind to rest and recharge, which helps you retain information better.
+
+                </div>
+
+                <div class=" Bold">
+                    Use active studying techniques
+
+                </div>
+                    <div class="starting">
+                        Active studying involves actively engaging with the material you are studying. Instead of simply reading your notes, try to summarize the information, make flashcards, or create diagrams. Engaging with the material in different ways can help you retain information better and make it easier to recall later. You can use two ways, active recall and spaced repetition, to remember your notes. Active recall involves actively retrieving information from your memory without looking at the notes. This tactic will allow you to keep the information in long-term memory. Spaced repetition is a process where you maintain at least a two-finger gap between each word. Using these techniques, you can use your time more effectively, thus mitigating your stress and anxiety. 
+
+                    </div>
+
+                    <div class=" Bold">
+                        Collaborate with peers
+    
+                    </div>
+                    <div class="starting">
+                        Discussing your topic with peers can be very impactful, especially for STEM students. Working with others, you can easily spot your mistakes and misconceptions and help others, which can replenish your mind with previous and novel information. You can understand the topic from different perspectives. Most prominently, you are learning teamwork, which is eminently imperative for STEM students.
+
+                    </div>
+
+                    <div class=" Bold">
+                        Use technology as your assistant
+    
+                    </div>
+                    <div class="starting">
+                        A multitude of resources are available on the internet, including apps, websites, and online resources, which can explicitly help you to learn and understand complex concepts. Moreover, surveying the internet can reduce your time to make notes and study material.
+
+                    </div>
+
+                    <div class=" Bold">
+                        Practice, practice, practice
+    
+                    </div>
+
+                    <div class="starting">
+                        Practice can help you delve deeper into the topic. To be proficient in a skill, you have to implement it to solve problems intuitively. By focusing on a specific skill, you’re forcing the specific relevant circuit in the neurons to fire continuously. This iterative use of a specific circuit triggers cells called oligodendrocytes to wrap layers of myelin around the neurons in the circuits—effectively dissolving the skill. Finally, seek help and support from teachers or peers if you encounter difficulties.
+
+                    </div>
+
+                    <div class=" Bold">
+                        Stay organized
+    
+                    </div>
+                    <div class="starting">
+                        Keep your notes, study material, and routine in one place so that you don't freak out before exams. Add flavors to your notes by consolidating them with various colors and charts to make them look seductive. 
+
+                    </div>
+                    <div class="starting">
+                        Lastly, to learn hard things quickly, you have to make your environment devoid of distractions. Try to maintain a balance, like when you study biology, stay diffuse in it only. Don't switch to another task or any other academic subject. Complete one task, then jump to another, following your routine. Record everything on your compelling scoreboard. By implementing and perpetuating all these habits, you can improve your understanding of complex concepts, develop problem-solving skills, and achieve academic success.
+                    </div>
+                    
+            </section>
+
+                
+            
+            
+            <section>
+                <div class="conclusion">
+
+                    Written by Md Rafsun Bin Hossain,<br> Oct/Nov 2023 A Level candidate & alumnus of Sunshine Grammar School, Chittagong, Bangladesh. 
+                </div>
+               </section>
+
+               <section id="blog">
+                <h2 class="Blogpost">More Blog Posts</h2>
+                <div class="blog-posts">
+                    
+                    <article class="blog-post">
+                        <img src="52930.jpg" alt="Blog 2">
+                        <h3>Strategies and tips to get all A/A* in A Level Physics, Biology, Mathematics, and Chemistry.</h3>
+                        <p>Everyone has a notion that achieving A* in A Level sounds a daunting task. I think it's not if you invest your time with proper tactics...</p>
+                        <a href="A Level tips.html" class="read-more">Read More</a>
+                    </article>
+        
+                    </div>
+            </section>
+               <footer>
+                <p>&copy; 2024 The SecluSive Chronicles. All Rights Reserved.</p>
+            </footer>
+    </body>
+</html>
